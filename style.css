@@ -1,9 +1,67 @@
-body {
+.index-body {
     background-image: url("images/farming.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
+  }
 h1{
-    color: darkblue;
+    color : white;
     
 }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.crop-box, .fertilizer-box {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+.img{
+    height: 20px;
+    width: 20px;
+}
+}
+h1{
+    color: white;
+}
+h2{
+    color:#333;
+}
+
+p {
+    color: #666;
+}
+/* Navbar styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line to make the links display in a row */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px; /* Add some spacing between the links */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove the right margin from the last link */
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+
