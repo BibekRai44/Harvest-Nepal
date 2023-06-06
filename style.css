@@ -2,6 +2,7 @@
     background-image: url("images/farming.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
   }
 h1{
     color : white;
@@ -33,6 +34,8 @@ h2{
 
 p {
     color: #666;
+    font-size: medium;
+    font-weight: 500;
 }
 /* Navbar styles */
 nav {
@@ -62,6 +65,11 @@ nav ul li a {
     padding: 10px;
     text-decoration: none;
 }
-
+.container{
+    text-align: center;
+}
+.x-colophon.bottom { 
+    background-color: transparent; 
+}
 
 
