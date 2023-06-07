@@ -71,5 +71,14 @@ nav ul li a {
 .x-colophon.bottom { 
     background-color: transparent; 
 }
+.small-input {
+    width: 550px; 
+}
+.small-input::placeholder {
+    text-align: center;
+    font-size: medium;
+}
+
+
 
 
