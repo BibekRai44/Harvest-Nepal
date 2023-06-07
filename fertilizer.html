@@ -27,37 +27,47 @@
         </ul>
     </nav>
     <div class="container">
-    <h1 class="text-danger text-center">Crop Recommendation System</h1>
+    <h1 class="text-danger text-center">Fertilzer Recommendation System</h1>
     </div>
     <div class="container">
         <form>
             <div class="form-group">
+                <label class="text-center text-primary">Crop</label>
+                <select class="form-control select-center" id="crop">
+                    <option value="" disabled selected hidden>Select a crop</option>
+                    <option value="wheat">rice</option>
+                    <option value="rice">maize</option>
+                    <option value="apple">apple</option>
+                    <option value="chickpea">chickpea</option>
+                    <option value="kidneybeans">kidneybeans</option>
+                    <option value="pigeonpeas">pigeonpeas</option>
+                    <option value="mothbeans">mothbeans</option>
+                    <option value="mungbean">mungbean</option>
+                    <option value="banana">banana</option>
+                    <option value="mango">mango</option>
+                    <option value="grapes">grapes</option>
+                    <option value="watermelon">watermelon</option>
+                    <option value="apple">apple</option>
+                    <option value="orange">orange</option>
+            </select>
                 <label class="text-primary">Nitrogen</label>
-                <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-140)">
+                <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-80)">
             </div>
             <div class="form-group">
                 <label class="text-primary">Phosphorous</label>
-                <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(5-145)">
+                <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(0-40)">
             </div>
             <div class="form-group">
                 <label class="text-primary">Potassium</label>
-                <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(5-205)">
+                <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(0-40)">
             </div>
             <div class="form-group">
-                <label class="text-primary">Temperature</label>
-                <input type="number" class="form-control small-input " id="temperature" placeholder="Enter temperature value(8-43)">
-            </div>
-            <div class="form-group">
-                <label class="text-primary">Humidity</label>
-                <input type="number" class="form-control small-input " id="humidity" placeholder="Enter humidity value(14-99)">
-            </div>
-            <div class="form-group">
-                <label class="text-primary">Rainfall</label>
-                <input type="number" class="form-control small-input " id="rainfall" placeholder="Enter rainfall value(20-298)">
+                <label class="text-primary">Soil Moisture</label>
+                <input type="number" class="form-control small-input " id="soil-moisture" placeholder="Enter rainfall value(0-40)">
             </div>
             <div class="form-group">
                 <label class="text-primary">PH</label>
-                <input type="number" class="form-control small-input " id="ph value" placeholder="Enter ph value(3-9)">
+                <input type="number" class="form-control small-input " id="ph value" placeholder="Enter ph value(0.0-5.5)">
             </div>
             <button type="submit" class="btn btn-success">Predict</button>
         </form>
