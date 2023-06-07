@@ -78,6 +78,11 @@ nav ul li a {
     text-align: center;
     font-size: medium;
 }
+.select-center option {
+    text-align: center;
+}
+
+
 
 
 
