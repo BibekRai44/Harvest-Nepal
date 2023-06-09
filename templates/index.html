@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <link rel="icon" type="image/png" href="images/logo/logo-white.png">
+    <link rel="icon" type="image/png" href="/static/images/logo/logo-white.png">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,35 +12,30 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Harvest Nepal | Delivering Agriculture Solutions  </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
 </head>
-<body>
+<body class="index-body">
     <nav class="navbar navbar-dark bg-primary">
-        <a href="index.html">
-            <h1>Harvest Nepal</h1>
-          </a>
-        
+        <h1>Harvest Nepal</h1>
         <ul>
-            <li><a href="about-us.html">About us</a></li>
-            <li><a href="crop.html">Crop</a></li>
-            <li><a href="fertilizer.html">Fertilizer</a></li>
+            <li><a href="{{ url_for('about_us') }}">About us</a></li>
+            <li><a href="{{ url_for('crop') }}">Crop</a></li>
+            <li><a href="{{ url_for('fertilizer') }}">Fertilizer</a></li>
         </ul>
     </nav>
-    <section class="core-value py-5">
-        <div class="container py-md-4">
-            <h3 class="heading mb-sm-5 mb-4 text-center"> About Us</h3>
-            <div class="row core-grids">
-                <div >
-                    <img src="images/about-us.jpg" class="img-fluid" alt="" />   
-                </div>
-            </div>
-            <p class="container">Harvest Nepal is a dedicated platform that aims to
-            empower farmers and promote sustainable agriculture practices in Nepal.
-            With a mission to enhance the agricultural sector, we provide valuable resources, information,
-            and tools to support farmers in making informed decisions and maximizing their yields.</p>
-            
+    <div class="object">
+        <div class="container">
+            <a href="/templates/crop.html">
+            <h1 class="text-center btn-success">Crop Recommendation System</h1>
+            </a>
         </div>
-    </section>
+        <div class="container">
+            <a href="/templates/fertilizer.html">
+            <h1 class="text-center btn-success">Fertilizer Recommendation System</h1>
+            </a>
+        </div>
+    </div>
     <div class="container">
         <footer class="footer">       
             <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.github.com//BibekRai44" target="_bl

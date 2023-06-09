@@ -1,5 +1,5 @@
 .index-body {
-    background-image: url("images/farming.jpg");
+    background-image: url("/static/images/farming.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -48,16 +48,16 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Add this line to make the links display in a row */
+    display: flex; 
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px; /* Add some spacing between the links */
+    margin-right: 10px; 
 }
 
 nav ul li:last-child {
-    margin-right: 0; /* Remove the right margin from the last link */
+    margin-right: 0; 
 }
 
 nav ul li a {
