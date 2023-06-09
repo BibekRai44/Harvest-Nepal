@@ -16,14 +16,14 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
-        <a href="/static/index.html">
+        <a href="{{ url_for('index') }}">
             <h1>Harvest Nepal</h1>
           </a>
         
         <ul>
-            <li><a href="/static/about-us.html">About us</a></li>
-            <li><a href="/static/crop.html">Crop</a></li>
-            <li><a href="/static/fertilizer.html">Fertilizer</a></li>
+            <li><a href="{{ url_for('about_us') }}">About us</a></li>
+            <li><a href="{{ url_for('crop') }}">Crop</a></li>
+            <li><a href="{{ url_for('fertilizer') }}">Fertilizer</a></li>
         </ul>
     </nav>
     <div class="container">
