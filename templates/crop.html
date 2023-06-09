@@ -30,7 +30,7 @@
     <h1 class="text-danger text-center">Crop Recommendation System</h1>
     </div>
     <div class="container">
-        <form>
+        <form id="crop-form" action="{{ url_for('crop') }}" method="post">
             <div class="form-group">
                 <label class="text-primary">Nitrogen</label>
                 <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-140)">
@@ -61,6 +61,7 @@
             </div>
             <button type="submit" class="btn btn-success">Predict</button>
         </form>
+       
     </div>
     <div class="container">
         <footer class="footer">       

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Harvest Nepal | Delivering Agriculture Solutions  </title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script src="/templates/main.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
@@ -33,8 +35,9 @@
         <form>
             <div class="form-group">
                 <label class="text-center text-primary">Crop</label>
-                <select class="form-control select-center" id="crop">
+                <select class="form-control select-center" id="crop" onchange="changePlaceholder()">
                     <option value="" disabled selected hidden>Select a crop</option>
+
                     <option value="wheat">rice</option>
                     <option value="rice">maize</option>
                     <option value="apple">apple</option>
@@ -50,23 +53,23 @@
                     <option value="apple">apple</option>
                     <option value="orange">orange</option>
             </select>
-                <label class="text-primary">Nitrogen</label>
+                <label class="text-primary" id="nitrogen">Nitrogen</label>
                 <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-80)">
             </div>
             <div class="form-group">
-                <label class="text-primary">Phosphorous</label>
+                <label class="text-primary" id="phosphorous">Phosphorous</label>
                 <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(0-40)">
             </div>
             <div class="form-group">
-                <label class="text-primary">Potassium</label>
+                <label class="text-primary" id="potassium">Potassium</label>
                 <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(0-40)">
             </div>
             <div class="form-group">
-                <label class="text-primary">Soil Moisture</label>
+                <label class="text-primary" id="soil-moisture">Soil Moisture</label>
                 <input type="number" class="form-control small-input " id="soil-moisture" placeholder="Enter rainfall value(0-40)">
             </div>
             <div class="form-group">
-                <label class="text-primary">PH</label>
+                <label class="text-primary" id="ph-value">PH</label>
                 <input type="number" class="form-control small-input " id="ph value" placeholder="Enter ph value(0.0-5.5)">
             </div>
             <button type="submit" class="btn btn-success">Predict</button>
