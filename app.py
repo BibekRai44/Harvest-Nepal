@@ -28,28 +28,16 @@ def fertilizer():
 
 @app.route("/crop_prediction", methods=["POST"])
 def crop_prediction():
-    if request.method == "POST":
+        features = [int(x) for x in request.form.values()]
         
-        nitrogen = int(request.form["nitrogen"])
-        phosphorous = int(request.form["phosphorous"])
-        potassium = int(request.form["potassium"])
-        temperature = int(request.form["temperature"])
-        humidity = int(request.form["humidity"])
-        rainfall = int(request.form["rainfall"])
-        ph_value = int(request.form["ph value"])
-
-        
-        input_data = np.array([[nitrogen, phosphorous, potassium, temperature, humidity, rainfall, ph_value]])
-
+        input_data = [np.array(features)]
         
         crop_prediction = model.predict(input_data)
         crop_name = crop_prediction[0]
+        return render_template("crop.html", prediction_text = "The flower species is {}".format(crop_name))
 
         
-        return ({"prediction_text": crop_name})
-
-  
-    return render_template("crop.html")
+   
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
