@@ -29,12 +29,12 @@ def fertilizer():
 @app.route("/crop_prediction", methods=["POST"])
 def crop_prediction():
         features = [int(x) for x in request.form.values()]
-        
+        print(features)
         input_data = [np.array(features)]
         
         crop_prediction = model.predict(input_data)
         crop_name = crop_prediction[0]
-        return render_template("crop.html", prediction_text = "The flower species is {}".format(crop_name))
+        return render_template("crop.html", prediction_text = "The crop you should harvest is {}".format(crop_name))
 
         
    

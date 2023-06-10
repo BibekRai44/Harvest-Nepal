@@ -33,31 +33,31 @@
         <form id="crop-form" action="{{ url_for('crop_prediction') }}" method="post">
             <div class="form-group">
                 <label class="text-primary">Nitrogen</label>
-                <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-140)">
+                <input type="number" class="form-control small-input" name="nitrogen" placeholder="Enter nitrogen value(0-140)">
             </div>
             <div class="form-group">
                 <label class="text-primary">Phosphorous</label>
-                <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(5-145)">
+                <input type="number" class="form-control small-input" name="phosphorous" placeholder="Enter phosphorous value(5-145)">
             </div>
             <div class="form-group">
                 <label class="text-primary">Potassium</label>
-                <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(5-205)">
+                <input type="number" class="form-control small-input " name="potassium" placeholder="Enter potassium value(5-205)">
             </div>
             <div class="form-group">
                 <label class="text-primary">Temperature</label>
-                <input type="number" class="form-control small-input " id="temperature" placeholder="Enter temperature value(8-43)">
+                <input type="number" class="form-control small-input " name="temperature" placeholder="Enter temperature value(8-43)">
             </div>
             <div class="form-group">
                 <label class="text-primary">Humidity</label>
-                <input type="number" class="form-control small-input " id="humidity" placeholder="Enter humidity value(14-99)">
+                <input type="number" class="form-control small-input " name="humidity" placeholder="Enter humidity value(14-99)">
             </div>
              <div class="form-group">
                 <label class="text-primary">Rainfall</label>
-                <input type="number" class="form-control small-input " id="rainfall" placeholder="Enter rainfall value(20-298)">
+                <input type="number" class="form-control small-input " name="rainfall" placeholder="Enter rainfall value(20-298)">
             </div>
             <div class="form-group">
                 <label class="text-primary">PH</label>
-                <input type="number" class="form-control small-input " id="ph value" placeholder="Enter ph value(3-9)">
+                <input type="number" class="form-control small-input " name="ph value" placeholder="Enter ph value(3-9)">
             </div>
             <button type="submit" class="btn btn-success">Predict</button>
         </form>
