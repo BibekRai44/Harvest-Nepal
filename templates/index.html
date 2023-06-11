@@ -32,7 +32,7 @@
                     <img src="static/images/about-us2.jpg" class="img-fluid" alt="" />   
                 </div>
             </div>
-            <p class="container">Harvest Nepal is a dedicated platform that aims to
+            <p class="container text-primary">Harvest Nepal is a dedicated platform that aims to
             empower farmers and promote sustainable agriculture practices in Nepal.
             With a mission to enhance the agricultural sector, we provide valuable resources, information,
             and tools to support farmers in making informed decisions and maximizing their yields.</p>
@@ -46,11 +46,14 @@
                         <div class="overlay">
                             <div class="container">
                                 <div class="w3layouts-banner-info text-center">
-                                    <h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+                                    <h4 class="text-wh mx-auto my-4"><strong> What we do?</strong></h4>
                                     <p class="text-li mx-auto mt-2">
-                                        1. What crop to plant here? <br>
-                                        2. What fertilizer to use? <br>
-                                        3. Which disease do your crop have?<br>
+                                        <ol class="text-primary">
+                                            <li> Suggest which crop to plant according to your soil chemicals.</li><br>
+                                            <li> Tell what fertilizer to use for the perfect yield of crops.</li><br>
+                                            <li> Predict which disease your crop may have.</li>
+                                        </ol>
+                                        
                                 </div>
                             </div>
                         </div>
@@ -63,24 +66,22 @@
             <div class="row blog-grids">
                 <div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
                     <img src="static/images/crop-2.jpeg">
-                    <a href="url_for('fertilizer')">
+                    <a href="{{ url_for('crop') }}">
                         <div class="blog-info">
     
                             <h4>Crop Recommendation System</h4>
     
-                            <p> Recommendation about the type of crops to be cultivated which is best suited
-                                for the respective conditions </p>
+                            <p> This system suggest us to grow suitable crops on basis of our soil chemicals. </p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
                     <img src="static/images/fertilizer 3.jpg">
-                    <a href="url_for('fertilizer')">
+                    <a href="{{ url_for('fertilizer') }}">
                         <div class="blog-info">
                             <h4>Fertilizer Recommendation System</h4>
-                            <p class="mt-2">Recommendation about the type of fertilizer best suited for the particular soil
-                                and the recommended crop</p>
+                            <p class="mt-2">This system helps us to use perfect fertilizer on basis of our soil chemicals and yield more production.</p>
                         </div>
                     </a>
                 </div>
@@ -89,7 +90,7 @@
                     <img src="static/images/diseases-2.jpg">
                         <div class="blog-info">
                             <h4>Crop Disease Finder</h4>
-                            <p class="mt-2">Predicting the name and causes of crop disease and suggestions to cure it</p>
+                            <p class="mt-2">This system helps us to detect the diseases on plant leaf and suggest solutions to cure it.</p>
                         </div>
                     
                 </div>
