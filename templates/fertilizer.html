@@ -32,8 +32,9 @@
     <h1 class="text-danger text-center">Fertilzer Recommendation System</h1>
     </div>
     <div class="container">
-        <form>
+        <form id="form">
             <div class="form-group">
+            <form id="fertilizer-form"  method="post">
                 <label class="text-center text-primary">Crop</label>
                 <select class="form-control select-center" id="crop" onchange="changePlaceholder()">
                     <option value="" disabled selected hidden>Select a crop</option>
@@ -52,28 +53,33 @@
                     <option value="watermelon">watermelon</option>
                     <option value="apple">apple</option>
                     <option value="orange">orange</option>
+            
             </select>
                 <label class="text-primary" id="nitrogen">Nitrogen</label>
-                <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-80)">
+                <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-80)" required>
             </div>
             <div class="form-group">
                 <label class="text-primary" id="phosphorous">Phosphorous</label>
-                <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(0-40)">
+                <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(0-40)" required>
             </div>
             <div class="form-group">
                 <label class="text-primary" id="potassium">Potassium</label>
-                <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(0-40)">
+                <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(0-40)" required>
             </div>
             <div class="form-group">
                 <label class="text-primary" id="soil-moisture">Soil Moisture</label>
-                <input type="number" class="form-control small-input " id="soil-moisture" placeholder="Enter rainfall value(0-40)">
+                <input type="number" class="form-control small-input " id="soil_moisture" placeholder="Enter rainfall value(0-40)" required>
             </div>
             <div class="form-group">
                 <label class="text-primary" id="ph-value">PH</label>
-                <input type="number" class="form-control small-input " id="ph value" placeholder="Enter ph value(0.0-5.5)">
+                <input type="number" class="form-control small-input " id="ph_value" placeholder="Enter ph value(0.0-5.5)" required>
             </div>
             <button type="submit" class="btn btn-success">Predict</button>
         </form>
+    </div>
+            </form>
+    <div class="container">
+        <div id="result" class="mt-3"></div>
     </div>
     <div class="container">
         <footer class="footer">       

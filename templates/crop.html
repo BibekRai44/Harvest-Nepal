@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Harvest Nepal | Delivering Agriculture Solutions  </title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script src="templates/main.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
@@ -33,33 +35,33 @@
         <form id="crop-form" action="{{ url_for('crop_prediction') }}" method="post">
             <div class="form-group">
                 <label class="text-primary">Nitrogen</label>
-                <input type="number" class="form-control small-input" name="nitrogen" placeholder="Enter nitrogen value(0-140)">
+                <input type="number" class="form-control small-input" name="nitrogen" placeholder="Enter nitrogen value(0-140) " required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Phosphorous</label>
-                <input type="number" class="form-control small-input" name="phosphorous" placeholder="Enter phosphorous value(5-145)">
+                <input type="number" class="form-control small-input" name="phosphorous" placeholder="Enter phosphorous value(5-145) " required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Potassium</label>
-                <input type="number" class="form-control small-input " name="potassium" placeholder="Enter potassium value(5-205)">
+                <input type="number" class="form-control small-input " name="potassium" placeholder="Enter potassium value(5-205) " required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Temperature</label>
-                <input type="number" class="form-control small-input " name="temperature" placeholder="Enter temperature value(8-43)">
+                <input type="number" class="form-control small-input " name="temperature" placeholder="Enter temperature value(8-43) " required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Humidity</label>
-                <input type="number" class="form-control small-input " name="humidity" placeholder="Enter humidity value(14-99)">
+                <input type="number" class="form-control small-input " name="humidity" placeholder="Enter humidity value(14-99) " required>
             </div>
              <div class="form-group">
                 <label class="text-primary">Rainfall</label>
-                <input type="number" class="form-control small-input " name="rainfall" placeholder="Enter rainfall value(20-298)">
+                <input type="number" class="form-control small-input " name="rainfall" placeholder="Enter rainfall value(20-298)" required>
             </div>
             <div class="form-group">
                 <label class="text-primary">PH</label>
-                <input type="number" class="form-control small-input " name="ph value" placeholder="Enter ph value(3-9)">
+                <input type="number" class="form-control small-input " name="ph value" placeholder="Enter ph value(3-9) " required>
             </div>
-            <button type="submit" class="btn btn-success">Predict</button>
+            <button type="submit" value="Submit" class="btn btn-success">Predict</button>
         </form>
         {{ prediction_text }}
     </div>
@@ -75,53 +77,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!--
-    <script>
-        
-        function predictCrop() {
-            
-            var nitrogen = parseInt(document.getElementById('nitrogen').value);
-            var phosphorous = parseInt(document.getElementById('phosphorous').value);
-            var potassium = parseInt(document.getElementById('potassium').value);
-            var temperature = parseInt(document.getElementById('temperature').value);
-            var humidity = parseInt(document.getElementById('humidity').value);
-            var rainfall = parseInt(document.getElementById('rainfall').value);
-            var phValue = parseInt(document.getElementById('ph_value').value);
-
-            
-            var inputData = {
-                nitrogen: nitrogen,
-                phosphorous: phosphorous,
-                potassium: potassium,
-                temperature: temperature,
-                humidity: humidity,
-                rainfall: rainfall,
-                ph_value: phValue
-            };
-
-            
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/crop', true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                   
-                    var response = JSON.parse(xhr.responseText);
-
-                    
-                    var predictionText = response.prediction_text;
-                    alert('Predicted Crop: ' + predictionText);
-                }
-            };
-            xhr.send(JSON.stringify(inputData));
-        }
-
-      
-        document.getElementById('crop-form').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            predictCrop(); 
-        });
-    </script>
--->
+    
 </body>
 </html>
