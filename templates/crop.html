@@ -39,30 +39,31 @@
             </div>
             <div class="form-group">
                 <label class="text-primary">Phosphorous</label>
-                <input type="number" class="form-control small-input" name="phosphorous" placeholder="Enter phosphorous value(5-145) " required>
+                <input type="number" class="form-control small-input" name="phosphorous" placeholder="Enter phosphorous value(5-145) " min=5 max=145 required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Potassium</label>
-                <input type="number" class="form-control small-input " name="potassium" placeholder="Enter potassium value(5-205) " required>
-            </div>
+                <input type="number" class="form-control small-input " name="potassium" placeholder="Enter potassium value(5-205) " min=5 max=205 required>
+            </div> 
             <div class="form-group">
                 <label class="text-primary">Temperature</label>
-                <input type="number" class="form-control small-input " name="temperature" placeholder="Enter temperature value(8-43) " required>
+                <input type="number" class="form-control small-input " name="temperature" placeholder="Enter temperature value(8-43) " min=8 max=43 required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Humidity</label>
-                <input type="number" class="form-control small-input " name="humidity" placeholder="Enter humidity value(14-99) " required>
+                <input type="number" class="form-control small-input " name="humidity" placeholder="Enter humidity value(14-99) " min=14 max=99 required>
             </div>
              <div class="form-group">
                 <label class="text-primary">Rainfall</label>
-                <input type="number" class="form-control small-input " name="rainfall" placeholder="Enter rainfall value(20-298)" required>
+                <input type="number" class="form-control small-input " name="rainfall" placeholder="Enter rainfall value(20-298)" min=20 max=298 required>
             </div>
             <div class="form-group">
                 <label class="text-primary">PH</label>
-                <input type="number" class="form-control small-input " name="ph value" placeholder="Enter ph value(3-9) " required>
+                <input type="number" class="form-control small-input " name="ph value" placeholder="Enter ph value(3-9) " min=3  max=9 required>
             </div>
             <button type="submit" value="Submit" class="btn btn-success">Predict</button>
         </form>
+        <br>
         {{ prediction_text }}
     </div>
     
