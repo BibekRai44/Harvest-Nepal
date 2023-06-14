@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Harvest Nepal | Delivering Agriculture Solutions  </title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <script src="/templates/main.js"></script>
+    <script defer src={{ url_for('static', filename='js/main.js') }}></script>
 
 </head>
 <body>
@@ -32,15 +32,14 @@
     <h1 class="text-danger text-center">Fertilzer Recommendation System</h1>
     </div>
     <div class="container">
-        <form id="form">
+        <form id="fertilizer-form">
             <div class="form-group">
-            <form id="fertilizer-form"  method="post">
                 <label class="text-center text-primary">Crop</label>
-                <select class="form-control select-center" id="crop" onchange="changePlaceholder()">
+                <select class="form-control select-center" name="crop">
                     <option value="" disabled selected hidden>Select a crop</option>
 
-                    <option value="wheat">rice</option>
-                    <option value="rice">maize</option>
+                    <option value="rice">rice</option>
+                    <option value="maize">maize</option>
                     <option value="apple">apple</option>
                     <option value="chickpea">chickpea</option>
                     <option value="kidneybeans">kidneybeans</option>
@@ -51,35 +50,34 @@
                     <option value="mango">mango</option>
                     <option value="grapes">grapes</option>
                     <option value="watermelon">watermelon</option>
-                    <option value="apple">apple</option>
                     <option value="orange">orange</option>
             
             </select>
-                <label class="text-primary" id="nitrogen">Nitrogen</label>
-                <input type="number" class="form-control small-input" id="nitrogen" placeholder="Enter nitrogen value(0-80)" required>
             </div>
             <div class="form-group">
-                <label class="text-primary" id="phosphorous">Phosphorous</label>
-                <input type="number" class="form-control small-input" id="phosphorous" placeholder="Enter phosphorous value(0-40)" required>
+                <label class="text-primary">Nitrogen</label>
+                <input type="number" class="form-control small-input" name="n" required>
             </div>
             <div class="form-group">
-                <label class="text-primary" id="potassium">Potassium</label>
-                <input type="number" class="form-control small-input " id="potassium" placeholder="Enter potassium value(0-40)" required>
+                <label class="text-primary">Phosphorous</label>
+                <input type="number" class="form-control small-input" name="p"  required>
             </div>
             <div class="form-group">
-                <label class="text-primary" id="soil-moisture">Soil Moisture</label>
-                <input type="number" class="form-control small-input " id="soil_moisture" placeholder="Enter rainfall value(0-40)" required>
+                <label class="text-primary">Potassium</label>
+                <input type="number" class="form-control small-input " name="k" required>
             </div>
             <div class="form-group">
-                <label class="text-primary" id="ph-value">PH</label>
-                <input type="number" class="form-control small-input " id="ph_value" placeholder="Enter ph value(0.0-5.5)" required>
+                <label class="text-primary">Soil Moisture</label>
+                <input type="number" class="form-control small-input " name="moisture"  required>
+            </div>
+            <div class="form-group">
+                <label class="text-primary" name="ph-value">PH</label>
+                <input type="number" class="form-control small-input " name="ph"  required>
             </div>
             <button type="submit" class="btn btn-success">Predict</button>
         </form>
-    </div>
-            </form>
-    <div class="container">
-        <div id="result" class="mt-3"></div>
+        <div style="margin-top: 3rem" class="" id="results">
+        </div>
     </div>
     <div class="container">
         <footer class="footer">       

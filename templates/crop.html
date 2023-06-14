@@ -35,7 +35,7 @@
         <form id="crop-form" action="{{ url_for('crop_prediction') }}" method="post">
             <div class="form-group">
                 <label class="text-primary">Nitrogen</label>
-                <input type="number" class="form-control small-input" name="nitrogen" placeholder="Enter nitrogen value(0-140) " required>
+                <input type="number" class="form-control small-input" name="nitrogen" placeholder="Enter nitrogen value(0-140) " min=0 max=140 required>
             </div>
             <div class="form-group">
                 <label class="text-primary">Phosphorous</label>
